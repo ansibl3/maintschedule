@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: John Smith
+  description: Executes scheduled maintenance
+  company: GNU
+  license: BSD
+  min_ansible_version: 1.5
+  categories:
+  - system
+dependencies: []

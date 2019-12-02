@@ -1,0 +1,12 @@
+---
+- name: Execute scheduled maintenance
+  when: maintschedule_command is defined and maintschedule_chdir is defined
+  shell:
+    cmd:  "{{ maintschedule_command }}"
+    chdir: "{{ maintschedule_chdir }}"
+  register: maintschedule_output
+  ignore_errors: true
+- name: "Display debug"
+  debug:
+    msg: "{{ maintschedule_output.stdout }}"
+
